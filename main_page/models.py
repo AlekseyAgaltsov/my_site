@@ -10,7 +10,7 @@ class Gost(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
     url = models.CharField(max_length=225, default='gost')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -20,7 +20,7 @@ class Gost(models.Model):
 class Iso(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -30,7 +30,7 @@ class Iso(models.Model):
 class Ansi(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -40,7 +40,7 @@ class Ansi(models.Model):
 class Api(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField( default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -50,7 +50,7 @@ class Api(models.Model):
 class Asme(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -60,7 +60,7 @@ class Asme(models.Model):
 class Astm(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -70,7 +70,7 @@ class Astm(models.Model):
 class Bs(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -80,7 +80,7 @@ class Bs(models.Model):
 class Din(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -90,7 +90,7 @@ class Din(models.Model):
 class Dd(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField( default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -100,7 +100,7 @@ class Dd(models.Model):
 class Dvs(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -110,7 +110,7 @@ class Dvs(models.Model):
 class En(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -120,7 +120,7 @@ class En(models.Model):
 class Iec(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -130,7 +130,7 @@ class Iec(models.Model):
 class Vdi(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
@@ -140,7 +140,7 @@ class Vdi(models.Model):
 class Pd(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField(max_length=100, default='0')
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
