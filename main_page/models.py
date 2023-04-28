@@ -40,7 +40,7 @@ class Ansi(models.Model):
 class Api(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=225, default='-')
-    size = models.IntegerField( default=0)
+    size = models.IntegerField(default=0)
     file_type = models.CharField(max_length=100, default='pdf')
 
     def __str__(self):
