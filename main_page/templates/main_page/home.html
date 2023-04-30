@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ntdl.ru</title>
+<meta name="description" content="НТДиЛ">
+<link rel = 'stylesheet' href='{% static 'main_page/css/common.css'%}'/>
+<link rel = 'stylesheet' href='{% static 'main_page/css/main.css'%}'/>
+</head>
+
+<body>
+
+<header class="header " id="header">
+
+    <br>
+    <div class="header__inner width-container page-fields">
+        <h1> НОРМАТИВНО-ТЕХНИЧЕСКАЯ <br>ДОКУМЕНТАЦИЯ И ЛИТЕРАТУРА</h1>
+
+        <form  action="/search/" class="search header__search" name="search" method="get">
+         <input type="text" class="search__input" name="q" placeholder="Поиск" value="" />
+         <span class="search__clear"></span>
+            <input type="submit" class="search__button font-bold" value="Найти" />
+        </form>
+            </div>
+
+            <nav role="navigation" class="main-nav page-fields font-caption header__nav">
+
+    <div class="main-nav__toggle"></div>
+
+    <div class="main-nav__inner width-container">
+        <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="/" class="main-nav__link">Главная</a></li>
+            <li class="main-nav__item"><a href="/how_to_get" class="main-nav__link nav-menu-buy-system">Как получть НТД</a></li>
+            <li class="main-nav__item"><a href="/how_to_order" class="main-nav__link nav-menu-demo-version">Как заказать НТД</a></li>
+<!--            <li class="main-nav__item"><a href="#" class="main-nav__link nav-menu-demo-access">Ссылка 1</a></li>-->
+            <li class="main-nav__item"><a href="/right_holders" class="main-nav__link">Правообладателям</a></li>
+            <li class="main-nav__item"><a href="/admin/" class="main-nav__link">ADMINPANEL (name:admin psw:admin)</a></li>
+            <li class="main-nav__item"><a href="/populating_the_database" class="main-nav__link">Заполнение БАЗЫ ДАННЫХ</a></li>
+        </ul>
+
+    </div>
+</nav>
+    </header>
+
+<div role="main" class="content">
+    
+<div class="index-page tablet-page-field">
+    <div class="index-page__main width-container">
+        <div class="index-page__mobile">
+            <noindex>
+            <section class="main-news index-page__block index-page__block_border-colored" id="mainNews">
+
+</div>
+{% block content %}
+<div class="useful-links page-fields index-page__useful-links" id="usefulLinks">
+    <div class="width-container">
+        <div class="useful-links__inner">
+            <section class="useful-links__section">
+                <div class="useful-links__header">Категории</div>
+                <ul class="useful-links__list useful-links__list_dashed">
+
+                    <b>МДС
+                        МИ
+                        МР
+                        МУ
+                        ОСТ
+                        ПБ
+                        ПМГ
+                        ПНАЭГ
+                        ПР
+                        Р
+                        РД
+                        РДИ
+                        РДС
+                        РМГ
+                        РСН
+                        РТМ
+                        СА
+                        САНПиН
+                        СД
+                        МД
+                        ГЭСН
+                        ВН
+                        ВНМД
+                        <br>
+                        СДОС
+                        СН
+                        СНиП
+                        СО
+                        СОУ
+                        СП
+                        СТБ
+                        СТН
+                        СТО
+                        ТЕР
+                        ТК
+                        ТПР
+                        ТУ
+                        ФРМ
+                        ГСН
+                        ГН
+                        ВСН
+                        ВНТП
+                        EUROCODE
+                        <br>
+                        <br>
+                        РАЗНОЕ
+                        ТЕХНИЧЕСКАЯ ЛИТЕРАТУРА
+                        ДИПЛОМЫ
+                        КУРСОВЫЕ
+                        РЕФЕРАТЫ
+                        СОЧИНЕНИЯ</b>
+                    <br><br>
+
+                    {% for category in categories %}
+                    <b><a href="{{ category.url }}">{{ category.name }} </a></b>
+                    {% endfor %}
+
+                    </ul>
+                <div class="separator useful-links__separator"></div>
+                <ul class="useful-links__list useful-links__list_small-margin">
+<!--                    <li><a href="/view_all_document">Все документы</a></li>-->
+                         <a href="http://ntdl.ru" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fntdl.ru%2F&4&0" width="132" height="132" border="0" title="QR код"></a>
+                </ul>
+
+            </section>
+
+<!--            <section class="useful-links__section">-->
+<!--                <div class="useful-links__header"><br> </div>-->
+<!--                <ul class="useful-links__list useful-links__list_dashed">-->
+
+<!--                    <li><a href="">ANSI</a></li>-->
+<!--                    <li><a href="">API</a></li>-->
+<!--                    <li><a href="">ASME</a></li>-->
+<!--                    <li><a href="">ASTM</a></li>-->
+<!--                    <li><a href="">BS</a></li>-->
+<!--                    <li><a href="">DIN</a></li>-->
+<!--                    <li><a href="">DD</a></li>-->
+<!--                    <li><a href="">DVS</a></li>-->
+<!--                    <li><a href="">EN</a></li>-->
+
+<!--                                    </ul>-->
+<!--            </section>-->
+<!--            <section class="useful-links__section">-->
+<!--                <div class="useful-links__header"><br></div>-->
+<!--                <ul class="useful-links__list useful-links__list_dashed">-->
+<!--                    <li><a href="">Техническая литература</a></li>-->
+<!--                    <li><a href="">Дипломы</a></li>-->
+<!--                    <li><a href="">Курсовые</a></li>-->
+<!--                    <li><a href="">Рефераты</a></li>-->
+<!--                    <li><a href="">Сочинения</a></li>-->
+
+<!--            </section>-->
+        </div>
+    </div>
+</div>
+        {% endblock %}
+
+<div class="bn width-container index-page__bn">
+    <div id="ban__148"
+        class="bn__inner"
+        data-banner-zone="148"
+        data-banner-flash="0"
+    >
+    </div>
+</div>
+</div>
+
+<footer class="footer page-fields " id="footer">
+    <div class="width-container">
+        <div class="footer__inner">
+            <div class="footer__section footer__contacts">
+                <section class="contacts " id="contacts">
+    <div class="contacts__header footer__header font-caption">Контактная информация</div>
+    <address class="contacts__inner vcard">
+        <div class="contacts__address adr">
+            <a href="mailto:ntdl@yandex.ru" class="contacts__mailto">ntdl@yandex.ru</a>
+
+        </div>
+        <div class="contacts__phones">
+            <div class="contacts__item tel"></div>
+        </div>
+    </address>
+</section>
+            </div>
+            <div class="footer__section footer__social">
+                <section class="social-links " id="socialLinks">
+    <div class="social-links__header footer__header font-caption">Мы в социальных сетях</div>
+    <ul class="social-links__items">
+        </a>
+        </li>
+        <li class="social-links__item social-links__item_tg">
+            <a href="https://t.me/">
+                <svg class="social-links__icon" viewBox="0 0 20 20">
+                    <g fill-rule="evenodd">
+                        <path class="social-links__icon-white" d="M4.52656837 9.89444137C7.44177145 8.6243337 9.38569678 7.78700098 10.3583443 7.38244322c2.7771064-1.15509463 3.3541653-1.35574692 3.7302842-1.36250745.0827239-.00132236.2676883.01917909.3875004.11639837.101167.08209006.1290021.19298206.1423221.27081244.01332.07783037.0299066.25512998.0167215.39366673-.1504924 1.58123641-.8016704 5.41848019-1.1329529 7.18949199-.140178.7493815-.4161929 1.0006453-.6834072 1.0252348-.5807187.0534387-1.0216901-.3837794-1.5841445-.7524754-.8801302-.5769364-1.37734771-.9360811-2.23166642-1.4990644-.98731307-.6506247-.34727911-1.0082193.21538775-1.592629.14725258-.1529428 2.70591237-2.48024172 2.75543527-2.69136421.0061937-.02640439.0119417-.12482747-.0465297-.17679847-.0584714-.051971-.1447702-.03419893-.2070458-.02006467-.0882738.02003491-1.4942931.94936153-4.21805794 2.78797985-.3990939.2740487-.76058076.4075744-1.08446058.4005771-.35705153-.0077139-1.0438754-.2018823-1.55445836-.3678527-.62625078-.2035695-1.12398243-.3111981-1.08064118-.656922.02257479-.1800744.27055393-.364236.74393743-.55248483Z">
+                        <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0m0 1c4.963 0 9 4.037 9 9s-4.037 9-9 9-9-4.037-9-9 4.037-9 9-9">
+                    </g>
+                </svg>
+                <span class="social-links__text">Telegram</span>
+            </a>
+
+    </ul>
+</section>
+            </div>
+            <div class="footer__section footer__separator">
+                <div class="separator "></div>
+            </div>
+            <div class="footer__section footer__copyright">
+                <section class="copyright " id="copyright">
+    <div class="copyright__report">
+        <a class="copyright__info-link copyright__report-protected-link" href="#"
+           aria-label="Все права защищены">Все права защищены © 2019—2023 ntdl.ru</a>
+        <a class="copyright__report-link" href="#"
+           aria-label="Сообщить о нарушении авторских прав"></a>
+    </div>
+    <div class="copyright__info">
+        <a class="copyright__info-link copyright__info-protected-link" href="#"
+           aria-label="Все права защищены">Все права защищены © 2019—2023 </a>
+    </div>
+</section>
+            </div>
+            <div class="footer__section footer__logo">
+                <a class="logo logo_footer " href=""></a>            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'main_page/home.html' %}
+
+
+{% block content %}
+
+{% for category in categories %}
+
+<div class="useful-links page-fields index-page__useful-links" id="usefulLinks">
+    <div class="width-container">
+        <div class="useful-links__inner">
+            <section class="useful-links__section">
+                <div class="useful-links__header"><h3>{{ category.name }}</h3></div>
+                <ul class="useful-links__list useful-links__list_dashed">
+                
+                <font color="gray">Наименование:</font>
+                <h4>{{ category.name }}:</h4>
+                <font color="gray">Описание:</font>
+                <h4>{{ category.description }}</h4>
+                <font color="gray">Размер:</font>
+                <h4>{{ category.size }}</h4>
+                <font color="gray">Тип файла:</font>
+                <h4>{{ category.file_type }}</h4><br>
+                <div class="separator useful-links__separator"></div>
+                <ul class="useful-links__list useful-links__list_small-margin">
+                <h4><a href="/how_to_get">Как получить НТД</a></h4>
+                    </ul>
+
+
+            </section>
+
+<!--            <section class="useful-links__section">-->
+<!--                <div class="useful-links__header"></div>-->
+<!--                <div class="useful-links__header"><br></div>-->
+<!--                <ul class="useful-links__list useful-links__list_dashed">-->
+<!--                -->
+<!--                <h4>{{ category.name }}</h4>-->
+<!--                <h4>{{ category.description }}</h4>-->
+<!--                <h4>{{ category.size }}</h4>-->
+<!--                <h4>{{ category.file_type }}</h4>-->
+
+
+<!--                </ul>-->
+<!--            </section>-->
+
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock content %}

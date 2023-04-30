@@ -1,0 +1,16 @@
+{% extends "main_page/home.html" %}
+
+{% load static %}
+{% block content %}
+
+ <h1>Поиск</h1>
+
+        {% for i in object_list %}
+
+
+<!--            <a href="/how_to_get"><h2>{{ i }}</h2></a><br>-->
+                <a href="/{{ i.url }}/{{ i.id }}"><h2> {{ i }} </h2></a><br>
+        
+        {% endfor %}
+
+{% endblock %}
