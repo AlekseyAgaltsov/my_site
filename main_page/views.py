@@ -8,7 +8,7 @@ from django.http import HttpResponse, request
 from django.shortcuts import render
 from django.views.generic import ListView
 
-from main_page.models import Gost, Category, Ansi, Api, Asme, Astm, Bs, Din, Dd, Dvs, En, Iec, Vdi, Pd, Iso
+from main_page.models import *
 
 
 # Create your views here.
