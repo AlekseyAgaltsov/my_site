@@ -8,9 +8,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>ntdl.ru</title>
-<meta name="description" content="НТДиЛ">
-<link rel = 'stylesheet' href='{% static 'main_page/css/common.css'%}'/>
-<link rel = 'stylesheet' href='{% static 'main_page/css/main.css'%}'/>
+    <meta name="description" content="НТДиЛ">
+    <link rel = 'stylesheet' href='{% static 'main_page/css/common.css'%}'/>
+    <link rel = 'stylesheet' href='{% static 'main_page/css/main.css'%}'/>
     <script src="{% static 'main_page/js/common.js' %}"></script>
     <script src="{% static 'main_page/js/main.js' %}"></script>
 </head>
@@ -21,7 +21,7 @@
 
     <br>
     <div class="header__inner width-container page-fields">
-        <h1> НОРМАТИВНО-ТЕХНИЧЕСКАЯ <br>ДОКУМЕНТАЦИЯ И ЛИТЕРАТУРА</h1>
+        <a href="/"><h1> НОРМАТИВНО-ТЕХНИЧЕСКАЯ <br>ДОКУМЕНТАЦИЯ И ЛИТЕРАТУРА</h1></a>
 
         <form  action="/search/" class="search header__search" name="search" method="get">
          <input type="text" class="search__input" name="q" placeholder="Поиск" value="" />
@@ -41,7 +41,7 @@
             <li class="main-nav__item"><a href="/how_to_order" class="main-nav__link nav-menu-demo-version">Как заказать НТД</a></li>
 <!--            <li class="main-nav__item"><a href="#" class="main-nav__link nav-menu-demo-access">Ссылка 1</a></li>-->
             <li class="main-nav__item"><a href="/right_holders" class="main-nav__link">Правообладателям</a></li>
-            <li class="main-nav__item"><a href="/admin/" class="main-nav__link">ADMINPANEL (name:admin psw:admin)</a></li>
+<!--            <li class="main-nav__item"><a href="/admin/" class="main-nav__link">ADMINPANEL (name:admin psw:admin)</a></li>-->
             <li class="main-nav__item"><a href="/populating_the_database" class="main-nav__link">Заполнение БАЗЫ ДАННЫХ</a></li>
         </ul>
 
