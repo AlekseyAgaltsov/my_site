@@ -26,7 +26,6 @@ def index(request):
 
 
 def populating_the_database(request):
-
     conn = sqlite3.connect('db.sqlite3')
 
     c = conn.cursor()
@@ -243,6 +242,8 @@ def about_cat(request, cat):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'main_page/category.html', {'page_obj': page_obj})
+    else:
+        return render(request, 'main_page/category.html')
 
 
 def about_doc(request, cat, doc):
