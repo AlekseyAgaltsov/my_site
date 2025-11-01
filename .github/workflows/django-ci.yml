@@ -1,0 +1,8 @@
+name: Workflow
+on: workflow_dispatch # manual 
+jobs:
+  print: # jobs name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print to console
+        run: echo hello
