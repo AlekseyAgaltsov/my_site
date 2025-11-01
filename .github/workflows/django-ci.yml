@@ -4,5 +4,9 @@ jobs:
   print: # jobs name
     runs-on: ubuntu-latest
     steps:
-      - name: Print to console
+      - name: Print to console  # 1 step
         run: echo hello
+      - name: Print new line  # 2 step
+        run: |
+          echo 1st
+          echo 2d
