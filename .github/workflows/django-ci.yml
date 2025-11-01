@@ -1,12 +1,16 @@
-name: Workflow
+name: Test
 on: workflow_dispatch # manual 
 jobs:
-  print: # jobs name
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print to console  # 1 step
-        run: echo hello
-      - name: Print new line  # 2 step
+      - name: Get Repository Code # Клонирование репозитория 
+        uses: actions/checkout@v5
+        
+      - name : Install depandencies # Установка зависимостей Python
         run: |
-          echo 1st
-          echo 2d
+          python -m pip install --upgrade pip
+
+      - name : tests
+        run: |
+          python manage.py test
